@@ -1,0 +1,362 @@
+@charset "utf-8";
+
+
+
+/*全端末（PC・タブレット・スマホ）共通設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body,html {width: 100%;height: 100%;}
+body {
+	margin: 0px;
+	padding: 0px;
+	color: #67574a;	/*全体の文字色*/
+	font-family: "ヒラギノ丸ゴ Pro", "Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;	/*フォント種類*/
+	font-size: 15px;	/*文字サイズ*/
+	line-height: 2.2;		/*行間*/
+	background: #dcdcd8;	/*背景色*/
+	-webkit-text-size-adjust: none;
+}
+h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
+ul {list-style-type: none;}
+ol {padding-left: 40px;padding-bottom: 15px;}
+img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
+table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
+iframe {width: 100%;}
+
+/*リンク（全般）設定
+---------------------------------------------------------------------------*/
+a {
+	color: #e76a04;		/*リンクテキストの色*/
+	transition: 0.4s;	/*マウスオン時の移り変わるまでの時間設定。0.4秒。*/
+	font-size: large;
+}
+a:hover {
+	color: #6983a9;			/*マウスオン時の文字色*/
+	text-decoration: none;	/*マウスオン時に下線を消す設定。残したいならこの１行削除。*/
+}
+
+/*ヘッダー。最初に出てくるアニメーションのメニューブロック。
+---------------------------------------------------------------------------*/
+header {
+	width: 100%;height: 110%;overflow: hidden;position: relative;
+	background: #000 url(../images/bg.png) no-repeat center center;	/*背景画像の設定（古いブラウザ用）*/
+	background: #000 url(../images/bg.png) no-repeat center center / cover;	/*背景画像の設定*/
+}
+/*h1タグ*/
+header h1 {
+	position: absolute;
+	top: 0px;	/*上から0pxの場所に配置*/
+	width: 100%;	/*幅*/
+	text-align: center;		/*テキストをセンタリング*/
+	background: #99918b;	/*背景色（古いブラウザ用）*/
+	background: rgba(0,0,0,0.8);	/*背景色。左４つの数字はRGBでのカラーコード指定。最後の0.8は色が80%ついた状態。*/
+	color: #fff;	/*文字色*/
+	font-weight: normal;	/*hタグのデフォルトの太字を標準に*/
+	letter-spacing: 0.2em;	/*文字間隔を少し広くとる設定*/
+	font-size: 12px;		/*文字サイズ*/
+	z-index: 10;	/*重なりの順番。数字が大きい方が上に配置されます。*/
+}
+
+/*inner
+---------------------------------------------------------------------------*/
+.inner {
+	overflow: hidden;
+	max-width: 1400px;	/*コンテンツの最大幅*/
+	padding: 50px 10%;	/*上下、左右へのボックス内の余白*/
+}
+
+/*背景色のスタイルです。contentsとセットで使います。
+---------------------------------------------------------------------------*/
+/*bg1*/
+.bg1 {
+	background: #d4cec8;	/*背景色のみ*/
+}
+/*bg2（Contactブロックで使用）*/
+.bg2 {
+	background: #000 url(../images/bg2.jpg) no-repeat center center;	/*背景画像の読み込み（古いブラウザ用）*/
+	background: #000 url(../images/bg2.jpg) no-repeat center center / cover;	/*背景画像の読み込み*/
+	color: #fff !important;	/*文字色*/
+}
+.bg2 a {
+	color: #fff !important;	/*リンクテキストの文字色*/
+}
+
+/*contents
+---------------------------------------------------------------------------*/
+/*h2見出し*/
+.contents h2 {
+	clear: both;
+	margin-bottom: 30px;	/*下に空けるスペース*/
+	font-size: 40px;		/*文字サイズ*/
+	text-align: center;		/*文字をセンタリング*/
+	letter-spacing: 0.2em;	/*文字間隔を少し広くとる設定*/
+	line-height: 1.5;		/*行間をデフォルトから少し狭くする*/
+}
+/*h2見出し内のspanタグ。小文字表記部分。*/
+.contents h2 span {
+	display: block;
+	font-size: 12px;	/*文字サイズ*/
+}
+/*h3見出し*/
+.contents h3 {
+	clear: both;
+	margin-bottom: 20px;	/*下に空けるスペース*/
+	font-size: 20px;		/*文字サイズ*/
+	background: url(../images/line1.png) no-repeat center bottom;	/*背景画像（下線）の読み込み（古いブラウザ用）*/
+	background: url(../images/line1.png) no-repeat center bottom / 100% 2px;	/*背景画像（下線）の読み込み。幅は100%、高さを2pxにする。*/
+	padding: 0 10px;	/*上下、左右へのブロック内の余白*/
+}
+/*段落タグ*/
+.contents p {
+	padding: 0px 10px 30px;		/*上、左右、下への余白*/
+}
+/*段落タグが続いた場合の設定*/
+.contents p + p {
+	margin-top: -10px;
+}
+/*setionが続いた場合の２つ目のsectionへの設定*/
+.contents section + section {
+	margin-top: 50px;	/*上に空けるスペース*/
+}
+
+/*Galleryページの各ボックス
+---------------------------------------------------------------------------*/
+.list {
+	width: 33%;		/*幅。今は３列ですが、25%に変更すれば4列になります。*/
+	float: left;	/*左に回り込み*/
+	background: #000;	/*背景色。下の設定で透明度を半分にしているので、その際に出てくる色です。白にしておけば白っぽく表示されます。*/
+}
+/*画像の設定*/
+.list a img {
+	opacity: 0.5;	/*透明度50%。*/
+}
+/*マウスオン時の画像の設定*/
+.list a:hover img {
+	opacity: 1;		/*色が100%ついた状態*/
+}
+
+/*footerブロック
+---------------------------------------------------------------------------*/
+footer {
+	clear: both;
+	text-align: center;	/*センタリング*/
+	background: #222;	/*背景色*/
+	color: #fff;		/*文字色*/
+	padding: 10px 0;	/*上下、左右へのボックス内の余白*/
+}
+footer a {text-decoration: none;color: #fff;}
+footer .pr {display: block;font-size: 12px;}
+
+/*「更新情報・お知らせ」ブロック
+---------------------------------------------------------------------------*/
+/*見出しを含まないお知らせブロック*/
+#new dl {
+	padding: 0 10px;	/*上下、左右へのボックス内の余白*/
+}
+/*日付設定*/
+#new dt {
+	float: left;	/*左に回り込み*/
+	width: 9em;		/*幅*/
+	letter-spacing: 0.1em;	/*文字間隔を少しだけ広くとる設定*/
+}
+/*記事設定*/
+#new dd {
+	padding-left: 9em;	/*左に空ける余白*/
+}
+
+/*テーブル（ta1）
+---------------------------------------------------------------------------*/
+/*ta1設定*/
+.ta1 {
+	width: 100%;
+	margin: 0 auto 30px;	/*上、左右、下へのテーブルの外側へとるスペース*/
+}
+.ta1, .ta1 td, .ta1 th {
+	border: 1px solid #67574a;	/*テーブルの枠線の幅、線種、色*/
+	padding: 10px 15px;	/*ボックス内の余白*/
+	word-break: break-all;
+}
+/*テーブル１行目に入った見出し部分（※caption）*/
+.ta1 caption {
+	border: 1px solid #67574a;	/*テーブルの枠線の幅、線種、色*/
+	border-bottom: none;		/*上のborderの指定から下線だけ消す設定*/
+	padding: 10px 15px;	/*上下、左右へのボックス内の余白*/
+	background: rgba(255,255,255,0.3);	/*背景色。255,255,255は白で、0.3は30%色がついた状態。古いブラウザでは適用されないので、必要ならこの上の行に通常のbackground指定を加えて下さい。*/
+	text-align: left;		/*文字を左寄せ*/
+}
+/*ta1の左側ボックス*/
+.ta1 th {
+	width: 140px;	/*幅*/
+	text-align: center;	/*センタリング*/
+}
+
+/*ページの上部に戻る「↑」ボタン
+---------------------------------------------------------------------------*/
+@keyframes scroll {
+0% {opacity: 0;}
+100% {opacity: 1;}
+}
+/*通常時のボタンは非表示*/
+body .nav-fix-pos-pagetop a {
+	display: none;
+}
+/*fixmenu_pagetop.jsで設定している設定値になったら出現するボタンスタイル*/
+body.is-fixed-pagetop .nav-fix-pos-pagetop a {
+	display: block;text-decoration: none;text-align: center;
+	width: 50px;	/*ボタンの幅*/
+	line-height: 50px;	/*ボタンの高さ*/
+	z-index: 100;
+	position: fixed;
+	bottom: 20px;	/*ウィンドウの下から20pxの場所に配置*/
+	right: 1%;		/*ウィンドウの右から1%の場所に配置*/
+	background: #000;	/*背景色（古いブラウザ用）*/
+	background: rgba(0,0,0,0.6);	/*背景色。0,0,0は黒の事で0.6は60%色がついた状態。*/
+	color: #fff;	/*文字色*/
+	border-radius: 50%;	/*角丸指定。50%にすると円形になる。四角形がいいならこの１行削除。*/
+	animation-name: scroll;	/*上のアニメーションで指定しているkeyframesの名前（scroll）*/
+	animation-duration: 1S;	/*アニメーションの実行時間*/
+	animation-fill-mode: forwards;	/*アニメーションの完了後、最後のキーフレームを維持する*/
+}
+/*マウスオン時の背景色*/
+body.is-fixed-pagetop .nav-fix-pos-pagetop a:hover {
+	background: #999;
+}
+
+/*トップページのNEWアイコン
+---------------------------------------------------------------------------*/
+.newicon {
+	background: #F00;	/*背景色*/
+	color: #FFF;		/*文字色*/
+	font-size: 70%;		/*文字サイズ*/
+	line-height: 1.5;
+	padding: 2px 5px;
+	border-radius: 2px;
+	margin: 0px 5px;
+	vertical-align: text-top;
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.look {background: #c3b5a2;background: rgba(0,0,0,0.1);padding: 5px 10px;border-radius: 4px;}
+.mb15,.mb1em {margin-bottom: 15px !important;}
+.mb30 {margin-bottom: 30px !important;}
+.mb50 {margin-bottom: 50px !important;}
+.clear {clear: both;}
+ul.disc {padding: 0em 25px 15px;list-style: disc;}
+.color1, .color1 a {color: #b52654 !important;}
+.pr {font-size: 10px;}
+.wl {width: 96%;}
+.ws {width: 50%;}
+.c {text-align: center;}
+.r {text-align: right;}
+.l {text-align: left;}
+.fl {float: left;}
+.fr {float: right;}
+.big1 {font-size: 40px;}
+.mini1 {font-size: 11px;display: inline-block;line-height: 1.5;}
+.sh {display: none;}
+
+
+
+
+/*画面幅800px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:800px){
+
+/*inner
+---------------------------------------------------------------------------*/
+.inner {
+	padding: 50px 3%;	/*上下、左右へのボックス内の余白*/
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+body.s-n #sub,body.s-n #footermenu,.m-n {display: none;}
+.big1 {font-size: 20px;}
+.fl {float: none;}
+.fr {float: none;}
+.sh {display:block;}
+.pc {display:none;}
+
+}
+
+
+
+/*画面幅480px以下の設定
+------------------------------------------------------------------------------------------------------------------------------------------------------*/
+@media screen and (max-width:480px){
+
+/*全体の設定
+---------------------------------------------------------------------------*/
+body {
+	font-size: 12px;	/*文字サイズ*/
+	line-height: 1.5;	/*行間*/
+}
+
+/*inner
+---------------------------------------------------------------------------*/
+.inner {
+	padding: 30px 3%;	/*上下、左右へのボックス内の余白*/
+}
+
+/*contents
+---------------------------------------------------------------------------*/
+/*h2見出し*/
+.contents h2 {
+	margin-bottom: 20px;	/*下に空けるスペース*/
+	font-size: 24px;		/*文字サイズ*/
+	letter-spacing: normal;	/*文字間隔をデフォルトにする*/
+}
+/*h3見出し*/
+.contents h3 {
+	margin-bottom: 10px;	/*下に空けるスペース*/
+	font-size: 16px;	/*文字サイズ*/
+	padding-bottom: 5px;	/*下線と文字が近すぎるので、少し余白を作る*/
+}
+/*段落タグ*/
+.contents p {
+	padding: 0px 10px 20px;		/*上、左右、下への余白*/
+}
+/*setionが続いた場合の２つ目のsectionへの設定*/
+.contents section + section {
+	margin-top: 20px;	/*上に空けるスペース*/
+}
+
+/*テーブル（ta1）
+---------------------------------------------------------------------------*/
+/*ta1設定*/
+.ta1, .ta1 td, .ta1 th {
+	padding: 5px;	/*ボックス内の余白*/
+}
+/*ta1の左側ボックス*/
+.ta1 th {
+	width: 100px;
+}
+
+/*その他
+---------------------------------------------------------------------------*/
+.ws,.wl {width: 94%;}
+.big1 {font-size: 16px;}
+
+/* ボタン*/
+a .btn-square-pop {
+	position: relative;
+	display: inline-block;
+	padding: 0.25em 0.5em;
+	text-decoration: none;
+	color: #FFF;
+	background: #fd9535;/*背景色*/
+	border-bottom: solid 2px #d27d00;/*少し濃い目の色に*/
+	border-radius: 4px;/*角の丸み*/
+	box-shadow: inset 0 2px 0 rgba(255,255,255,0.2), 0 2px 2px rgba(0, 0, 0, 0.19);
+	font-weight: bold;
+  }
+  
+a .btn-square-pop:active {
+	border-bottom: solid 2px #fd9535;
+	box-shadow: 0 0 2px rgba(0, 0, 0, 0.30);
+  }
+
+}
