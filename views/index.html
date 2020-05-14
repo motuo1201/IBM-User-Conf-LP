@@ -10,9 +10,12 @@
 <link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="css/style-opening.css">
 <link rel="stylesheet" href="css/lightbox.min.css">
+<link rel="stylesheet" href="css/modaal.min.css">
 <script src="js/fixmenu_pagetop.js"></script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script src="js/scroll.js"></script>
+<script src="js/modaal.min.js"></script>
+<script>$('.modaal').modaal();</script>
 <!--[if lt IE 9]>
 <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -112,7 +115,7 @@
 				class="btn-square-pop" target="blank">こちら</a>から提出できます！<br>(Google Formsが開きます)
 			</p>
 		</section>
-		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" style="padding-top:5px" class="twitter-share-button" data-text="IBM User Group Conference に参加しましょう！" data-url="https://ibm-user-group-conf.eu-de.cf.appdomain.cloud/" data-hashtags="IBMUserGroupCon2020" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+		<a href="https://twitter.com/share?ref_src=twsrc%5Etfw" style="padding-top:5px" class="twitter-share-button" data-text="IBM User Group Conference に参加します！" data-url="https://ibm-user-group-conf.eu-de.cf.appdomain.cloud/" data-hashtags="IBMUserGroupCon2020" data-show-count="false">Tweet</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 	</div>
 	<!--/.inner-->
 </div>
@@ -122,7 +125,8 @@
 <div class="contents bg1" id="TableOfContents">
 	<div class="inner">
 		<section>
-			<h2>Table Of Content<span>カンファレンスのコンテンツについて</span></h2>				
+			<h2>Table Of Content<span>カンファレンスのコンテンツについて</span></h2>
+			<span>タイトルをクリックするとセッションの詳細が表示されます。</span>				
 			<table class="ta1">
 				<caption>Day 1</caption>
 				<tr>
@@ -141,8 +145,22 @@
 				</tr>
 				<tr>
 					<th>20:00-<br>20:20</th>
-					<td></td>
-					<td></td>
+					<td>
+						<span data-modaal-content-source="#session1_1_mod" class="modaal" id="session1_1">セッションタイトル1</span><br>
+						<a href="#speaker1">Speaker</a>
+						<div id="session1_1_mod" style="display:none;">
+							<h4>タイトル</h4>
+							<p>詳細をここに記述することができます。1-1</p>
+						</div>
+					</td>
+					<td>
+						<span data-modaal-content-source="#session1_2_mod" class="modaal" id="session1_2">セッションタイトル2</span><br>
+						<a href="#speaker1">Speaker</a>
+						<div id="session1_2_mod" style="display:none;">
+							<h4>タイトル</h4>
+							<p>詳細をここに記述することができます。1-2</p>
+						</div>
+					</td>
 					<td></td>
 					<td></td>
 					<td></td>
@@ -237,12 +255,13 @@
 			<th>
 				<a href="images_photo/sample1.jpg" data-lightbox="group1" data-title="登壇者のお名前を入れます。">
 					<figure style="width: 150px;"><img src="images_photo/sample1_mini.jpg" alt="登壇者のお名前。"></figure>
-				</a>				
+				</a>
 			</th>
 			<td>
-				<p style="margin-left: 10px;">
+				<p style="margin-left: 10px;" id="speaker1">
 					登壇者情報(DUMMY)<br>
-					<a href="https://twitter.com/motumotuo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-text="IBM User Group Conference に参加しましょう！" data-url="https://ibm-user-group-conf.eu-de.cf.appdomain.cloud/" data-hashtags="IBMUserGroupCon2020" data-show-count="false">Follow @motumotuo</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+					<a href="#session1_1">担当セッション</a><br>
+					<a href="https://twitter.com/motumotuo?ref_src=twsrc%5Etfw" class="twitter-follow-button" data-text="IBM User Group Conference に参加します！" data-url="https://ibm-user-group-conf.eu-de.cf.appdomain.cloud/" data-hashtags="IBMUserGroupCon2020" data-show-count="false">Follow @motumotuo</a><script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 				</p>
 			</td>
 		</tr>
