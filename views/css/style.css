@@ -18,8 +18,8 @@ body {
 	background: #dcdcd8;	/*背景色*/
 	-webkit-text-size-adjust: none;
 }
-h1,h2,h3,h4,h5,p,ul,ol,li,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
-ul {list-style-type: none;}
+h1,h2,h3,h4,h5,p,ol,dl,dt,dd,form,figure,form {margin: 0px;padding: 0px;font-size: 100%;}
+ul {list-style-type: circle;}
 ol {padding-left: 40px;padding-bottom: 15px;}
 img {border: none;max-width: 100%;height: auto;vertical-align: middle;}
 table {border-collapse:collapse;font-size: 100%;border-spacing: 0;}
