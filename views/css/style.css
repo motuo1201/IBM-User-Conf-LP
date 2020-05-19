@@ -284,11 +284,13 @@ ul.disc {padding: 0em 25px 15px;list-style: disc;}
 	display: inline-block;
 	vertical-align: top;
 }
-
-
+.top_image {
+	height: 300px;
+	object-fit: cover; 
+}
 /*画面幅800px以下の設定
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
-@media screen and (max-width:800px){
+@media screen and (max-width:850px){
 
 /*inner
 ---------------------------------------------------------------------------*/
@@ -304,7 +306,11 @@ body.s-n #sub,body.s-n #footermenu,.m-n {display: none;}
 .fr {float: none;}
 .sh {display:block;}
 .pc {display:none;}
-
+.top_image {
+	width: 170px;
+	height: 150px;
+	object-fit: cover; 
+}
 }
 
 
