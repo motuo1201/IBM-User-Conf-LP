@@ -50,24 +50,84 @@ a:hover {
 ---------------------------------------------------------------------------*/
 header {
 	width: 100%;height: 110%;overflow: hidden;position: relative;
-	background: #000 url(../images/bg-keyboard.jpg) no-repeat center center;	/*背景画像の設定（古いブラウザ用）*/
-	background: #000 url(../images/bg-keyboard.jpg) no-repeat center center / cover;	/*背景画像の設定*/
 }
-/*h1タグ*/
-header h1 {
+.site-header{
+    background: #c3b5a2;
+    display: flex;
+    padding: 0px 20px;
+    position: fixed;
+	width: 100%;
+	height: 70px;
+}
+.site-logo img{
+    height: 60px;
+    width: auto;
+}
+.gnav__menu{
+    display: flex;
+}
+.gnav__menu__item{
+    margin-left: 20px;
+}
+.gnav__menu__item a{
+    text-decoration: none;
+}
+.bg{
+	top:70px;
+	background: url(../images/hero-area.jpg) no-repeat center;
+	background-size: cover;
+	position: relative;
+	height:500px;
+	text-align: center;
+
+}
+.bg::before{
+	content: ' ';
+	background-color: rgba(0,0,0,.7);
 	position: absolute;
-	top: 0px;	/*上から0pxの場所に配置*/
-	width: 100%;	/*幅*/
-	text-align: center;		/*テキストをセンタリング*/
-	background: #99918b;	/*背景色（古いブラウザ用）*/
-	background: rgba(0,0,0,0.8);	/*背景色。左４つの数字はRGBでのカラーコード指定。最後の0.8は色が80%ついた状態。*/
-	color: #fff;	/*文字色*/
-	font-weight: normal;	/*hタグのデフォルトの太字を標準に*/
-	letter-spacing: 0.2em;	/*文字間隔を少し広くとる設定*/
-	font-size: 12px;		/*文字サイズ*/
-	z-index: 10;	/*重なりの順番。数字が大きい方が上に配置されます。*/
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+   }
+.box{
+	position: absolute;
+	width: 100%;
+	margin: 0 15px;
+	text-align: center;
+	padding:80px 20px;
 }
 
+.bg button {
+	position: absolute;
+	bottom: 3%;
+	left: 50%;
+	-ms-transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	transform: translate(-50%,-50%);
+	margin:0;
+	padding:0;
+	background-color:rgb(71, 71, 236);
+	color: white;
+	border-radius: 30px;
+	}
+.entry-link {
+	color:white;
+	font-size: 3em;
+	margin: 60px;
+}
+.event-title{
+	font-size: 48px;
+	color: white;
+	font-weight: 700;
+}
+.event-date{
+	font-size: 18px;
+    font-style: italic;
+    margin-bottom: 22px;
+    line-height: 24px;
+    color: #fff;
+}
 /*inner
 ---------------------------------------------------------------------------*/
 .inner {
@@ -127,9 +187,12 @@ header h1 {
 }
 /*setionが続いた場合の２つ目のsectionへの設定*/
 .contents section + section {
-	margin-top: 50px;	/*上に空けるスペース*/
+	margin: 0 auto;
 }
 
+.contents{
+	padding-top: 70px;
+}
 /*Galleryページの各ボックス
 ---------------------------------------------------------------------------*/
 .list {
@@ -284,36 +347,38 @@ ul.disc {padding: 0em 25px 15px;list-style: disc;}
 	display: inline-block;
 	vertical-align: top;
 }
+.ug-image{
+	width: 180px;
+}
 .top_image {
-	height: 300px;
-	object-fit: cover; 
+	width: 170px;
+	height: 150px;
 }
 /*画面幅800px以下の設定
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/
 @media screen and (max-width:850px){
 
-/*inner
----------------------------------------------------------------------------*/
-.inner {
-	padding: 50px 3%;	/*上下、左右へのボックス内の余白*/
-}
+	/*inner
+	---------------------------------------------------------------------------*/
+	.inner {
+		padding: 50px 3%;	/*上下、左右へのボックス内の余白*/
+	}
 
-/*その他
----------------------------------------------------------------------------*/
-body.s-n #sub,body.s-n #footermenu,.m-n {display: none;}
-.big1 {font-size: 20px;}
-.fl {float: none;}
-.fr {float: none;}
-.sh {display:block;}
-.pc {display:none;}
-.top_image {
-	width: 170px;
-	height: 150px;
-	object-fit: cover; 
+	/*その他
+	---------------------------------------------------------------------------*/
+	body.s-n #sub,body.s-n #footermenu,.m-n {display: none;}
+	.big1 {font-size: 20px;}
+	.fl {float: none;}
+	.fr {float: none;}
+	.sh {display:block;}
+	.pc {display:none;}
+	.event-title{
+		font-size: 18px;
+	}
+	.event-date{
+		font-size: 15px;
+	}
 }
-}
-
-
 
 /*画面幅480px以下の設定
 ------------------------------------------------------------------------------------------------------------------------------------------------------*/

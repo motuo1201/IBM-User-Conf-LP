@@ -35,34 +35,56 @@ IBM User Group Conferenceはこうしたユーザーグループが一堂に会�
 <script src="js/scroll.js"></script>
 <script src="js/modaal.min.js"></script>
 <script>$('.modaal').modaal();</script>
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
-<!--[if lt IE 10]>
-<style>
-#menubar {position:absolute;bottom:10%;}
-#menubar li {width:15%;float:left;margin-left:3%;position:relative;}
-#menubar li:hover {width:15%;}
-</style>
-<![endif]-->
+<script>
+	$(function(){
+		$(window).on('load resize', function(){
+			// masthead scroll
+			const header   = $('#header-nav'); // fixed DOM
+			const addclass = 'scrolled'; // add css class
+			const offset   = header.offset();
+			$(window).scroll(function() {
+			if ($(window).scrollTop() > scrollY) {
+				header.addClass(addclass);
+			} else {
+				header.removeClass(addclass);
+			}
+			});
+		})
+	});
+</script>
 </head>
 
 <body>
 
-<header>
-
-<h1>IBM User Group Conference</h1>
-
-<ul id="menubar">
-<li id="menu1"><a href="#news"><img src="images/bmxug.jpg" alt="bmxug-character" class="top_image"><span>About<br>カンファレンス概要</span></a></li>
-<li id="menu2"><a href="#TableOfContents"><img src="images/tjbot.jpg" alt="TJbot" class="top_image"><span>Table Of Contents<br>セッション内容</span></a></li>
-<li id="menu3"><a href="#speakers"><img src="images/jimuc.png" alt="JIMUC_LOGO" class="top_image"><span>Speakers<br>登壇者のご紹介</span></a></li>
-<li id="menu4"><a href="#contact"><img src="images/node-red-ico.png" alt="Contact Us" class="top_image"><span>Contact<br></span></a></li>
-<li id="menu5"><a href="#"><img src="images/conference-image.jpg" alt="conference-image" class="top_image"><span>IBM User Group Conference<br>2020</span></a></li>
-</ul>
-
+<header class="site-header">
+	<h1 class="site-logo"><img src="images/IUGC_logo_black.png" alt="IBM User Group Conference"></h1>
+	<nav class="gnav">
+		<ul class="gnav__menu">
+			<li id="menu1" class="gnav__menu__item"><a href="#news">カンファレンス概要</a></li>
+			<li id="menu2" class="gnav__menu__item"><a href="#TableOfContents">Table Of Contents</a></li>
+			<li id="menu3" class="gnav__menu__item"><a href="#speakers">登壇者のご紹介</li>
+			<li id="menu4" class="gnav__menu__item"><a href="#support">支援・協賛</li>
+			<li id="menu5" class="gnav__menu__item"><a href="#contact">Contact</li>
+		</ul>
+	</nav>
 </header>
+
+<div class="bg">
+	<div class="box">
+		<p class="event-date">25-26, June 2020 - Digital online event</p>
+		<p class='event-title'>IBM USER GROUP CONFERENCE</p>
+		<p style="color: white;">
+			現在、IBM CloudやIBM発のOSSは常に進化をしながら開発に貢献しています。<br>
+			この動きに合わせて、多くのUser Groupが日々、様々な情報を発信してきました。<br>
+			当カンファレンスはこうしたUser Groupが一堂に会する機会を作り、最新情報に触れながら技術に携わる<br>
+			皆さんとの交流と情報発信を行うことを目的にしています。				
+		</p>
+	</div>
+	<button>
+		<a href="https://iugc.connpass.com/event/176351/" target="blank" class="entry-link">参加登録</a>
+	</button>
+</div>
+
 
 <div class="contents" id="news">
 	<div style="text-align: center;">
@@ -72,21 +94,49 @@ IBM User Group Conferenceはこうしたユーザーグループが一堂に会�
 	</div>
 	<div class="inner">
 		<section>
-			<h2>What's New<span>お知らせ</span></h2>
+			<h4>What's new</h4>
 			<dl id="new">
 				<dt>2020/05/12</dt>
 				<dd>サイト公開。<span class="newicon">NEW</span></dd>
 			</dl>
-
-		</section>
-		<section>
-			<h2>IBM User Group Conference！</h2>
-
+			<h2>IBM User Group Conference！</h2>			
 			<h3>カンファレンス概要</h3>
 			<p>
 				現在、IBM CloudやIBM発のOSSは常に進化をしながら開発に貢献しています。この動きに合わせて、多くのUser Groupが日々、様々な情報を発信してきました。
 				当カンファレンスはこうしたUser Groupが一堂に会する機会を作り、最新情報に触れながら技術に携わる皆さんとの交流と情報発信を行うことを目的にしています。				
 			</p>
+			<p>
+				また、本カンファレンスは、IBM系の各ユーザーコミュニティ共催のカンファレンスになります。
+				各コミュニティ間の交流、各分野でのテクノロジー情報のキャッチアップ、各コミュニティでの活動のシェアなどを元に、IBMユーザーコミュニティを全体的に盛り上げていきましょう！
+			</p>
+			<h3>
+				本カンファレンスの魅力
+			</h3>
+			<p style="padding-bottom: 0px;">
+				IBMのテクノロジー、プロダクト、サービスへ興味のある方、利用している方は是非参加しましょう！
+				いろいろなIBM系ユーザーコミュニティからの情報が盛りだくさんのカンファレンスです。
+			</p>
+			<ul>
+				<li>
+					各ユーザーコミュニティから、第一線で活躍しているメンバーが登壇します。最新情報や活動内容、テクニカルセッションまで盛りだくさんです。
+				</li>
+				<li>
+					ユーザーコミュニティは、その名の通り同じサービスや製品を利用しているユーザー同士が集う場所。あなたも仲間入りするチャンスです。
+				</li>
+				<li>
+					このカンファレンスは日本のコミュニティが主催しますが、デジタルならではで海外からのスピーカー、オーディエンスも迎えての開催です。
+				</li>
+				<li>
+					各方面のエキスパートが大勢参加します。素晴らしいインスピレーションを得ましょう。
+				</li>
+				<li>
+					ユーザーコミュニティはサイロになりがちです。他のコミュニティとの交流を積極的に行いましょう。
+				</li>
+				<li>
+					カンファレンスの魅力は同じ目的を持った人との出会い。国内外問わず参加者同士つながりましょう。
+				</li>
+			</ul>
+
 			<h3>開催日程</h3>
 			<p>
 				Day 1 : 2020 年 6 月 25 日(木) 19:00〜21:00
@@ -94,34 +144,6 @@ IBM User Group Conferenceはこうしたユーザーグループが一堂に会�
 			<p>
 				Day 2 : 2020 年 6 月 26 日(金) 19:00〜21:00
 			</p>
-
-			<h3>企画運営コミュニティ一覧</h3>
-				
-			<div style="margin-left: 10px;">
-				- IBM Cloud User Group(BMXUG) 
-				<a href="https://bmxug.connpass.com/" target="blank">HP</a>
-				<a href="https://goo.gl/forms/sa8eHJLD6KlmD5sV2" target="blank">Join Slack</a>
-				<a href="https://twitter.com/bluemixjp" target="blank">Twitter</a>
-				<a href="https://www.facebook.com/groups/bmxug" target="blank">facebook</a>
-				<br>
-				- Japan IBM Middleware Users Community (JIMUC)
-				<a href="https://jimuc.amebaownd.com/" target="blank">HP</a>
-				<br>
-				- Kabanero Meetup
-				<br>
-				- Node-RED User Group
-				<a href="https://nodered.jp/" target="blank">HP</a>
-				<a href="https://nodered.jp/slack/" target="blank">Join Slack</a>
-				<a href="https://twitter.com/noderedjp" target="blank">Twitter</a>
-				<a href="https://www.facebook.com/groups/noderedjp/" target="blank">facebook</a>
-				<br>
-				- TJBot User Group
-				<br>   
-				- IBM 見習い隊
-				<br>
-				- 水曜ワトソンカフェ
-				<br>
-			</div>
 			<p></p>
 			<h3>カンファレンスへの参加方法について</h3>
 			<h4>セッション形式</h4>
@@ -280,7 +302,10 @@ IBM User Group Conferenceはこうしたユーザーグループが一堂に会�
 	<section>
 		<h2>Speakers<span>登壇者</span></h2>
 		
-		<p>登壇者の情報はこちらに</p>
+		<p>豪華スピーカー陣は今後どんどん追加予定です！
+			登壇希望の方は<a href="https://docs.google.com/forms/d/e/1FAIpQLSfTuz-Tzr_7uJba1_c4wJoju-ttRvssrb1-Hv3RnE7rsgY34g/viewform" 
+			class="btn-square-pop" target="blank">こちら</a>からCfPをお送り下さい。
+		</p>
 
 		<table>
 			<tr>
@@ -314,6 +339,77 @@ IBM User Group Conferenceはこうしたユーザーグループが一堂に会�
 
 </div>
 <!--/.contents-->
+
+
+<div class="contents bg1" id="support">
+
+	<div class="inner">
+	
+	<section>
+	<h2>支援・協賛</h2>
+		<div style="text-align: center;">
+			<p>
+				本イベントは各ユーザーコミュニティの有志の方々により運営しております。<br>
+				協力頂いているすべての団体、企業、個人へ感謝いたします。
+			</p>	
+		</div>
+		<div style="display: flex;">
+			<img src='images/bmxug.jpg' class="top_image">
+			<p>
+				IBM Cloud User Group(BMXUG)<br>
+				<a href="https://bmxug.connpass.com/" target="blank">HP</a>
+				<a href="https://goo.gl/forms/sa8eHJLD6KlmD5sV2" target="blank">Join Slack</a>
+				<a href="https://twitter.com/bluemixjp" target="blank">Twitter</a>
+				<a href="https://www.facebook.com/groups/bmxug" target="blank">facebook</a> 	
+			</p>
+		</div>
+		<div style="display: flex;padding-top:10px">
+			<img src='images/jimuc.png' class="top_image">
+			<p>
+				Japan IBM Middleware Users Community (JIMUC)<br>
+				<a href="https://jimuc.amebaownd.com/" target="blank">HP</a>
+			</p>
+		</div>
+		<div style="display: flex;padding-top:10px">
+			<img src='images/no-image.png' class="top_image">
+			<p>
+				Kabanero Meetup
+			</p>
+		</div>
+		<div style="display: flex;padding-top:10px">
+			<img src='images/node-red-ico.png' class="top_image">
+			<p>
+				Node-RED User Group<br>
+				<a href="https://nodered.jp/" target="blank">HP</a>
+				<a href="https://nodered.jp/slack/" target="blank">Join Slack</a>
+				<a href="https://twitter.com/noderedjp" target="blank">Twitter</a>
+				<a href="https://www.facebook.com/groups/noderedjp/" target="blank">facebook</a>
+			</p>
+		</div>
+		<div style="display: flex;padding-top:10px">
+			<img src='images/tjbot.jpg' class="top_image">
+			<p>
+				TJBot User Group
+			</p>
+		</div>
+		<div style="display: flex;padding-top:10px">
+			<img src='images/no-image.png' class="top_image">
+			<p>
+				IBM 見習い隊
+			</p>
+		</div>
+		<div style="display: flex;padding-top:10px">
+			<img src='images/no-image.png' class="top_image">
+			<p>
+				水曜ワトソンカフェ
+			</p>
+		</div>
+	</section>
+
+	</div>
+	<!--/.inner-->
+
+</div>
 
 <div class="contents bg2" id="contact">
 
