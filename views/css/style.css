@@ -90,6 +90,7 @@ header {
 	left: 0;
    }
 .box{
+	left : 0px;
 	position: absolute;
 	width: 100%;
 	text-align: center;
