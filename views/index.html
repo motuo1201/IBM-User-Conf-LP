@@ -35,23 +35,6 @@ IBM User Group Conferenceはこうしたユーザーグループが一堂に会�
 <script src="js/scroll.js"></script>
 <script src="js/modaal.min.js"></script>
 <script>$('.modaal').modaal();</script>
-<script>
-	$(function(){
-		$(window).on('load resize', function(){
-			// masthead scroll
-			const header   = $('#header-nav'); // fixed DOM
-			const addclass = 'scrolled'; // add css class
-			const offset   = header.offset();
-			$(window).scroll(function() {
-			if ($(window).scrollTop() > scrollY) {
-				header.addClass(addclass);
-			} else {
-				header.removeClass(addclass);
-			}
-			});
-		})
-	});
-</script>
 </head>
 
 <body>
@@ -69,7 +52,7 @@ IBM User Group Conferenceはこうしたユーザーグループが一堂に会�
 	</nav>
 </header>
 
-<div class="bg">
+<div class="inner bg">
 	<div class="box">
 		<p class="event-date">25-26, June 2020 - Digital online event</p>
 		<p class='event-title'>IBM USER GROUP CONFERENCE</p>

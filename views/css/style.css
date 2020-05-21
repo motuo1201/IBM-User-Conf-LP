@@ -79,7 +79,6 @@ header {
 	position: relative;
 	height:500px;
 	text-align: center;
-
 }
 .bg::before{
 	content: ' ';
