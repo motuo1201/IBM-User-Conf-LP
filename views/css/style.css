@@ -92,9 +92,8 @@ header {
 .box{
 	position: absolute;
 	width: 100%;
-	margin: 0 15px;
 	text-align: center;
-	padding:80px 20px;
+	padding-top: 80px;
 }
 
 .bg button {
