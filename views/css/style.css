@@ -207,6 +207,11 @@ header {
 	opacity: 1;		/*色が100%ついた状態*/
 }
 
+.speaker{
+	color :#6983a9;
+	font-weight: bold;
+}
+
 /*footerブロック
 ---------------------------------------------------------------------------*/
 footer {
@@ -247,6 +252,7 @@ footer .pr {display: block;font-size: 12px;}
 	border: 1px solid #67574a;	/*テーブルの枠線の幅、線種、色*/
 	padding: 10px 15px;	/*ボックス内の余白*/
 	word-break: break-all;
+	table-layout: fixed;
 }
 /*テーブル１行目に入った見出し部分（※caption）*/
 .ta1 caption {
